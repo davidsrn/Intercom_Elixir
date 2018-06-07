@@ -18,3 +18,5 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
   * Docs: https://hexdocs.pm/phoenix
   * Mailing list: http://groups.google.com/group/phoenix-talk
   * Source: https://github.com/phoenixframework/phoenix
+
+<!-- App.Auth.create_user(%{username: "david", password: "srn", email: "david@srn.com"}) -->

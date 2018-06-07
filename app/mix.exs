@@ -43,7 +43,9 @@ defmodule App.Mixfile do
       {:cowboy, "~> 1.0"},
       {:guardian, "~> 1.0"},
       {:comeonin, "~> 4.0"},
-      {:bcrypt_elixir, "~> 0.12"}
+      {:bcrypt_elixir, "~> 0.12"},
+      {:estree, "~> 2.3.0"},
+      {:httpoison, "~> 0.8"}
     ]
   end
 

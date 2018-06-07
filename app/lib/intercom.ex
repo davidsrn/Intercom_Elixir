@@ -1,7 +1,8 @@
 defmodule Intercom do
   alias ESTree.Tools.Builder
   alias ESTree.Tools.Generator
-  alias Intercom.Escaping
+  alias App.Escaping
+
 
   def to_javascript_object(dict) when is_map(dict) do
     props = Enum.map(dict, fn {k, v} ->
