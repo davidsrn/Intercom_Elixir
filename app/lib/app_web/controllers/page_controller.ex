@@ -45,20 +45,21 @@ defmodule AppWeb.PageController do
 
   def intercom(conn, _params) do
     is_user = Guardian.Plug.current_resource(conn)
-    case is_user do
-      nil ->
-        {:ok, snippet} = Intercom.snippet(
-          %{email: ""},
-          app_id: "<intercom_app_id>",
-          secret: "<intercom_secret>"
-        )
-      _ ->
-        {:ok, snippet} = Intercom.snippet(
-          %{email: is_user.email}, #we send the users email or id to get the hash
-          app_id: "<intercom_app_id>",
-          secret: "<intercom_secret>"
-        )
-    end
+    {:ok, snippet} =
+      case is_user do
+        nil ->
+          Intercom.snippet(
+            %{email: ""},
+            app_id: "<intercom_app_id>",
+            secret: "<intercom_secret>"
+          )
+        _ ->
+          Intercom.snippet(
+            %{email: is_user.email},
+            app_id: "<intercom_app_id>",
+            secret: "<intercom_secret>"
+          )
+      end
     assign(conn, :intercom, snippet)
   end
 end
