@@ -29,4 +29,4 @@ import_config "#{Mix.env}.exs"
 
 config :app, App.Auth.Guardian,
   issuer: "App",
-  secret_key: "XsIx5pBm5xtU8oeNHDb/y5aL5qnaAOMSuEQTbpK03zWaXGOOxwAiZKE9bag3ryt2"
+  secret_key: "ur_Guardian_secret" #Fill this with mix guardian.gen.secret
