@@ -35,7 +35,7 @@ defmodule Intercom do
     end
 
     case key do
-      {:error, reason} -> {:error, reason}
+      # {:error, reason} -> {:error, reason}
       key ->
         {:ok, case secret do
           nil -> opts
@@ -45,6 +45,8 @@ defmodule Intercom do
             |> String.downcase
           })
         end}
+      _ -> {:ok, ""}
+
     end
   end
 
