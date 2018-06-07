@@ -49,15 +49,14 @@ defmodule AppWeb.PageController do
       case is_user do
         nil ->
           Intercom.snippet(
-            %{email: ""},
-            app_id: "<intercom_app_id>",
-            secret: "<intercom_secret>"
+            %{},
+            app_id: "your_app_id",
           )
         _ ->
           Intercom.snippet(
             %{email: is_user.email},
-            app_id: "<intercom_app_id>",
-            secret: "<intercom_secret>"
+            app_id: "your_app_id",
+            secret: "ur_app_secret"
           )
       end
     assign(conn, :intercom, snippet)
