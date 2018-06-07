@@ -11,3 +11,5 @@ erl_crash.dump
 app/config/config\.exs
 
 app/config/dev\.exs
+
+app/lib/app_web/controllers/page_controller\.ex
